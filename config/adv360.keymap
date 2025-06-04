@@ -54,7 +54,7 @@
 &trans  &trans  &trans  &trans          &trans     &trans  &none                                                                           &none      &trans  &trans             &mmv MOVE_UP     &trans           &trans   &trans
 &trans  &trans  &trans  &trans          &trans     &trans  &none   &kp LC(LS(LG(F)))  &kp GLOBE      &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &none      &trans  &mmv MOVE_LEFT     &trans           &mmv MOVE_RIGHT  &trans   &trans
 &trans  &trans  &trans  &trans          &trans     &trans                             &trans         &trans                                           &trans  &trans             &mmv MOVE_DOWN   &trans           &trans   &trans
-&trans  &trans  &trans  &kp LEFT_ARROW  &kp RIGHT          &trans  &trans             &trans         &trans             &mkp RCLK          &mkp RCLK          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans           &trans   &trans
+&trans  &trans  &trans  &kp LEFT_ARROW  &kp RIGHT          &trans  &trans             &trans         &trans             &mkp LCLK          &mkp RCLK          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans           &trans   &trans
             >;
         };
 
