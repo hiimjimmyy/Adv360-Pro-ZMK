@@ -61,7 +61,7 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4          &kp F5     &kp F6  &tog 1                                                                          &mo 3      &kp F7  &kp F8             &kp F9             &kp F10          &kp F11            &kp F12
 &trans  &trans  &trans  &trans          &trans     &trans  &none                                                                           &none      &trans  &trans             &mmv MOVE_UP       &trans           &pw                &trans
-&trans  &trans  &trans  &trans          &trans     &trans  &none   &kp LC(LS(LG(F)))  &kp GLOBE      &kp LS(LA(LC(F)))  &kp RIGHT_CONTROL  &none      &trans  &mmv MOVE_LEFT     &kp K_APPLICATION  &mmv MOVE_RIGHT  &kp K_SCREENSAVER  &trans
+&trans  &trans  &trans  &trans          &trans     &trans  &none   &kp LC(LS(LG(F)))  &kp GLOBE      &kp LS(LA(LG(F)))  &kp RIGHT_CONTROL  &none      &trans  &mmv MOVE_LEFT     &kp K_APPLICATION  &mmv MOVE_RIGHT  &kp K_SCREENSAVER  &trans
 &trans  &trans  &trans  &trans          &trans     &trans                             &kp HOME       &trans                                           &trans  &trans             &mmv MOVE_DOWN     &trans           &trans             &trans
 &trans  &trans  &trans  &kp LEFT_ARROW  &kp RIGHT          &trans  &trans             &kp END        &trans             &mkp LCLK          &mkp RCLK          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &trans           &trans             &trans
             >;
