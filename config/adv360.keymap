@@ -33,8 +33,9 @@
         shortcat: shortcat {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp LEFT_COMMAND &kp F>;
+            bindings = <&kp RA(LG(F))>;
             label = "SHORTCAT";
+            tap-ms = <0>;
         };
     };
 
