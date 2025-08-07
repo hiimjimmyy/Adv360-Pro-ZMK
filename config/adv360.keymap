@@ -37,6 +37,14 @@
             label = "SHORTCAT";
             tap-ms = <0>;
         };
+
+        switch_instance: switch_instance {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(GRAVE)>;
+            label = "SWITCH_INSTANCE";
+            tap-ms = <0>;
+        };
     };
 
     keymap {
