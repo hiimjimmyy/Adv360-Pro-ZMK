@@ -49,7 +49,7 @@
         terminal: terminal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(TILDE)>;
+            bindings = <&kp LC(GRAVE)>;
             label = "TERMINAL";
         };
     };
