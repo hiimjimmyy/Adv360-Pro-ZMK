@@ -23,14 +23,14 @@
     };
 
     macros {
-        pw: pw {
+        input_pw: pw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp Y &kp M &kp M &kp I &kp J &kp N1 &kp N2 &kp N3 &kp EXCL &kp EXCL &kp RET>;
             label = "PW";
         };
 
-        shortcat: shortcat {
+        call_shortcat: shortcat {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RA(INSERT)>;
@@ -38,7 +38,7 @@
             tap-ms = <0>;
         };
 
-        switch_instance: switch_instance {
+        switch_app_instance: switch_instance {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(GRAVE)>;
@@ -60,11 +60,11 @@
         mac {
             display-name = "Base";
             bindings = <
-&kp MINUS  &kp N1     &kp N2      &kp N3    &kp N4     &kp N5  &tog 1                                                                                        &mo 3             &kp N6  &kp N7    &kp N8        &kp N9    &kp N0    &kp EQUAL
-&kp TAB    &kp Q      &kp W       &kp E     &kp R      &kp T   &vsc_goto_terminal                                                                            &switch_instance  &kp Y   &kp U     &kp I         &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S       &kp D     &kp F      &kp G   &kp LEFT_CONTROL    &kp LEFT_COMMAND  &kp LEFT_CONTROL      &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RCTRL         &kp H   &kp J     &kp K         &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X       &kp C     &kp V      &kp B                                         &kp HOME              &kp PG_UP                                           &kp N   &kp M     &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp DELETE  &kp LEFT  &kp RIGHT          &kp BSPC            &shortcat         &kp END               &kp PG_DN          &kp ENTER      &kp SPACE                 &kp DOWN  &kp UP_ARROW  &kp LBKT  &kp RBKT  &mo 2
+&kp MINUS  &kp N1     &kp N2      &kp N3    &kp N4     &kp N5  &tog 1                                                                                        &mo 3                 &kp N6  &kp N7    &kp N8        &kp N9    &kp N0    &kp EQUAL
+&kp TAB    &kp Q      &kp W       &kp E     &kp R      &kp T   &vsc_goto_terminal                                                                            &switch_app_instance  &kp Y   &kp U     &kp I         &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S       &kp D     &kp F      &kp G   &kp LEFT_CONTROL    &kp LEFT_COMMAND  &kp LEFT_CONTROL      &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RCTRL             &kp H   &kp J     &kp K         &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X       &kp C     &kp V      &kp B                                         &kp HOME              &kp PG_UP                                               &kp N   &kp M     &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &kp DELETE  &kp LEFT  &kp RIGHT          &kp BSPC            &call_shortcat    &kp END               &kp PG_DN          &kp ENTER      &kp SPACE                     &kp DOWN  &kp UP_ARROW  &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
@@ -86,7 +86,7 @@
 &trans  &trans  &trans  &trans           &trans       &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                                                                &trans     &trans  &trans          &mmv MOVE_UP    &trans           &trans   &trans
 &trans  &trans  &trans  &trans           &trans       &kp C_BRIGHTNESS_DEC  &kp C_VOL_DN     &trans  &kp GLOBE          &tog 1          &kp RIGHT_CONTROL  &trans     &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans
 &trans  &trans  &trans  &trans           &trans       &trans                                         &kp LG(LEFT)       &msc SCRL_UP                                  &trans  &trans          &trans          &trans           &trans   &trans
-&trans  &trans  &trans  &kp LS(LC(TAB))  &kp RC(TAB)                        &trans           &trans  &kp LG(RIGHT)      &msc SCRL_DOWN  &mkp LCLK          &mkp RCLK          &msc MOVE_X(5)  &trans          &msc MOVE_X(5)   &trans   &pw
+&trans  &trans  &trans  &kp LS(LC(TAB))  &kp RC(TAB)                        &trans           &trans  &kp LG(RIGHT)      &msc SCRL_DOWN  &mkp LCLK          &mkp RCLK          &msc MOVE_X(5)  &trans          &msc MOVE_X(5)   &trans   &input_pw
             >;
         };
 
@@ -104,11 +104,11 @@
         windows {
             display-name = "Base";
             bindings = <
-&kp MINUS  &kp N1     &kp N2     &kp N3    &kp N4     &kp N5  &tog 1                                                                            &mo 3             &kp N6  &kp N7    &kp N8        &kp N9    &kp N0    &kp EQUAL
-&kp TAB    &kp Q      &kp W      &kp E     &kp R      &kp T   &vsc_goto_terminal                                                                &switch_instance  &kp Y   &kp U     &kp I         &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S      &kp D     &kp F      &kp G   &kp CAPS            &kp LEFT_CONTROL  &kp LEFT_WIN      &kp RCTRL  &kp RIGHT_ALT  &kp RCTRL         &kp H   &kp J     &kp K         &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X      &kp C     &kp V      &kp B                                         &kp HOME          &kp PG_UP                                   &kp N   &kp M     &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &shortcat  &kp LEFT  &kp RIGHT          &kp BSPC            &kp DEL           &kp END           &kp PG_DN  &kp ENTER      &kp SPACE                 &kp DOWN  &kp UP_ARROW  &kp LBKT  &kp RBKT  &mo 2
+&kp MINUS  &kp N1     &kp N2          &kp N3    &kp N4     &kp N5  &tog 1                                                                            &mo 3                 &kp N6  &kp N7    &kp N8        &kp N9    &kp N0    &kp EQUAL
+&kp TAB    &kp Q      &kp W           &kp E     &kp R      &kp T   &vsc_goto_terminal                                                                &switch_app_instance  &kp Y   &kp U     &kp I         &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S           &kp D     &kp F      &kp G   &kp CAPS            &kp LEFT_CONTROL  &kp LEFT_WIN      &kp RCTRL  &kp RIGHT_ALT  &kp RCTRL             &kp H   &kp J     &kp K         &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X           &kp C     &kp V      &kp B                                         &kp HOME          &kp PG_UP                                       &kp N   &kp M     &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &call_shortcat  &kp LEFT  &kp RIGHT          &kp BSPC            &kp DEL           &kp END           &kp PG_DN  &kp ENTER      &kp SPACE                     &kp DOWN  &kp UP_ARROW  &kp LBKT  &kp RBKT  &mo 2
             >;
         };
     };
