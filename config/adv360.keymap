@@ -82,11 +82,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4           &kp F5       &kp F6                &tog 1                                                                         &mo 3      &kp F7  &kp F8          &kp F9          &kp F10          &kp F11  &kp F12
-&trans  &trans  &trans  &trans           &trans       &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                                                                &trans     &trans  &trans          &mmv MOVE_UP    &trans           &trans   &trans
-&trans  &trans  &trans  &trans           &trans       &kp C_BRIGHTNESS_DEC  &kp C_VOL_DN     &trans  &kp GLOBE          &tog 1          &kp RIGHT_CONTROL  &trans     &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans
-&trans  &trans  &trans  &trans           &trans       &trans                                         &kp LG(LEFT)       &msc SCRL_UP                                  &trans  &trans          &trans          &trans           &trans   &trans
-&trans  &trans  &trans  &kp LS(LC(TAB))  &kp RC(TAB)                        &trans           &trans  &kp LG(RIGHT)      &msc SCRL_DOWN  &mkp LCLK          &mkp RCLK          &msc MOVE_X(5)  &trans          &msc MOVE_X(5)   &trans   &input_pw
+&bl BL_TOG  &kp F1  &kp F2  &kp F3           &kp F4       &kp F5                &trans                                                                         &mo 3      &kp F6  &kp F7          &kp F8          &kp F9           &kp F10  &kp K_SCREENSAVER
+&trans      &trans  &trans  &trans           &trans       &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                                                                &trans     &trans  &trans          &mmv MOVE_UP    &trans           &trans   &trans
+&trans      &trans  &trans  &trans           &trans       &kp C_BRIGHTNESS_DEC  &kp C_VOL_DN     &trans  &kp GLOBE          &tog 1          &kp RIGHT_CONTROL  &trans     &trans  &mmv MOVE_LEFT  &trans          &mmv MOVE_RIGHT  &trans   &trans
+&trans      &trans  &trans  &trans           &trans       &trans                                         &kp LG(LEFT)       &msc SCRL_UP                                  &trans  &trans          &mmv MOVE_DOWN  &trans           &trans   &trans
+&trans      &trans  &trans  &kp LS(LC(TAB))  &kp RC(TAB)                        &trans           &trans  &kp LG(RIGHT)      &msc SCRL_DOWN  &mkp LCLK          &mkp RCLK          &msc MOVE_X(5)  &trans          &msc MOVE_X(5)   &trans   &input_pw
             >;
         };
 
