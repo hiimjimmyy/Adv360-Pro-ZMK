@@ -103,8 +103,8 @@
 &bl BL_TOG  &kp F1  &kp F2  &kp F3           &kp F4       &kp F5                &trans                                                                         &mo 2      &kp F6  &kp F7          &kp F8          &kp F9           &kp F10  &kp K_SCREENSAVER
 &trans      &trans  &trans  &trans           &trans       &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                                                                &trans     &trans  &trans          &mmv MOVE_UP    &trans           &trans   &trans
 &trans      &trans  &trans  &trans           &trans       &kp C_BRIGHTNESS_DEC  &kp C_VOL_DN     &trans  &kp GLOBE          &kp RIGHT_GUI   &kp RIGHT_CONTROL  &trans     &trans  &mmv MOVE_LEFT  &trans          &mmv MOVE_RIGHT  &trans   &trans
-&trans      &trans  &trans  &trans           &trans       &trans                                         &kp LG(LEFT)       &msc SCRL_UP                                  &trans  &trans          &mmv MOVE_DOWN  &trans           &trans   &trans
-&trans      &trans  &trans  &kp LS(LC(TAB))  &kp RC(TAB)                        &tog 4           &trans  &kp LG(RIGHT)      &msc SCRL_DOWN  &mkp LCLK          &mkp RCLK          &msc MOVE_X(5)  &trans          &msc MOVE_X(5)   &trans   &input_pw
+&trans      &trans  &trans  &trans           &trans       &trans                                         &kp LG(LEFT)       &msc SCRL_UP                                  &trans  &trans          &mmv MOVE_DOWN  &trans           &trans   &to 4
+&trans      &trans  &trans  &kp LS(LC(TAB))  &kp RC(TAB)                        &to 0            &to 1   &kp LG(RIGHT)      &msc SCRL_DOWN  &mkp LCLK          &mkp RCLK          &msc MOVE_X(5)  &trans          &msc MOVE_X(5)   &trans   &input_pw
             >;
         };
 
