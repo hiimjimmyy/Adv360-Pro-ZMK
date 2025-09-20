@@ -23,7 +23,7 @@
     };
 
     macros {
-        input_pw: pw {
+        input_pw_mac: pw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp Y &kp M &kp M &kp I &kp J &kp N1 &kp N2 &kp N3 &kp EXCL &kp EXCL &kp RET>;
@@ -59,6 +59,13 @@
             bindings = <&kp LC(GRAVE)>;
             label = "SWITCH_INSTANCE_WINDOW";
         };
+
+        input_pw_window: input_pw_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(Y) &kp M &kp M &kp I &kp LS(J) &kp N8 &kp N2 &kp N1 &kp N5 &kp N1 &kp EXCL &kp N0 &kp N3 &kp N2 &kp N5 &kp RET>;
+            label = "INPUT_PW_WINDOW";
+        };
     };
 
     keymap {
@@ -89,11 +96,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&bl BL_TOG  &kp F1  &kp F2  &kp F3           &kp F4       &kp F5                &none                                                                         &mo 4      &kp F6  &kp F7          &kp F8          &kp F9           &kp F10  &kp K_SCREENSAVER
-&none       &none   &none   &none            &none        &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                                                               &none      &none   &none           &mmv MOVE_UP    &none            &none    &none
-&none       &none   &none   &none            &none        &kp C_BRIGHTNESS_DEC  &kp C_VOL_DN     &none  &kp GLOBE          &kp RIGHT_GUI   &kp RIGHT_CONTROL  &none      &none   &mmv MOVE_LEFT  &none           &mmv MOVE_RIGHT  &none    &none
-&none       &none   &none   &none            &none        &none                                         &kp LG(LEFT)       &msc SCRL_UP                                  &none   &none           &mmv MOVE_DOWN  &none            &none    &none
-&mo 2       &none   &none   &kp LS(LC(TAB))  &kp RC(TAB)                        &tog 3           &none  &kp LG(RIGHT)      &msc SCRL_DOWN  &mkp LCLK          &mkp RCLK          &msc MOVE_X(5)  &none           &msc MOVE_X(5)   &none    &input_pw
+&bl BL_TOG  &kp F1  &kp F2  &kp F3           &kp F4       &kp F5                &none                                                                         &mo 4      &kp F6  &kp F7          &kp F8          &kp F9           &kp F10           &kp K_SCREENSAVER
+&none       &none   &none   &none            &none        &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                                                               &none      &none   &none           &mmv MOVE_UP    &none            &none             &none
+&none       &none   &none   &none            &none        &kp C_BRIGHTNESS_DEC  &kp C_VOL_DN     &none  &kp GLOBE          &kp RIGHT_GUI   &kp RIGHT_CONTROL  &none      &none   &mmv MOVE_LEFT  &none           &mmv MOVE_RIGHT  &none             &none
+&none       &none   &none   &none            &none        &none                                         &kp LG(LEFT)       &msc SCRL_UP                                  &none   &none           &mmv MOVE_DOWN  &none            &none             &none
+&mo 2       &none   &none   &kp LS(LC(TAB))  &kp RC(TAB)                        &tog 3           &none  &kp LG(RIGHT)      &msc SCRL_DOWN  &mkp LCLK          &mkp RCLK          &msc MOVE_X(5)  &none           &msc MOVE_X(5)   &input_pw_window  &input_pw_mac
             >;
         };
 
